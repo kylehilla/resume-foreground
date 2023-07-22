@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Blocking View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="BlockingViewController" id="Y6W-OH-hqX" customClass="BlockingViewController" customModule="resume_foreground" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Dof-bj-x7z">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="glJ-jP-xJv">
+                                <rect key="frame" x="96.666666666666686" y="401" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="596-fs-7LZ"/>
+                                    <constraint firstAttribute="height" constant="50" id="qBG-qZ-OIq"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Dismiss"/>
+                                <connections>
+                                    <action selector="dismissSelf:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Zzq-Rx-kWs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dof-bj-x7z" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0CO-5v-fVX"/>
+                            <constraint firstAttribute="trailing" secondItem="Dof-bj-x7z" secondAttribute="trailing" id="CH2-5X-2ao"/>
+                            <constraint firstItem="glJ-jP-xJv" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="JcT-9o-QHc"/>
+                            <constraint firstItem="Dof-bj-x7z" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Wab-uk-H7C"/>
+                            <constraint firstAttribute="bottom" secondItem="Dof-bj-x7z" secondAttribute="bottom" id="m4v-0G-ZJA"/>
+                            <constraint firstItem="glJ-jP-xJv" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="u2D-Mw-4QC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dismissButton" destination="glJ-jP-xJv" id="Pbh-lX-rWh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="15"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="960" height="640"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
